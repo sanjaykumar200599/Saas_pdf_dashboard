@@ -13,8 +13,8 @@ async def get_db():
     async with SessionLocal() as session:
         yield session
 
-@router.post("/register")
-async def register(user: UserCreate, db: AsyncSession = Depends(get_db)):
+@router.post("/signup")
+async def signup(user: UserCreate, db: AsyncSession = Depends(get_db)):
     q = await db.execute(select(User).where(User.username == user.username))
     existing = q.scalar_one_or_none()
     if existing:

@@ -8,7 +8,10 @@ SessionLocal = sessionmaker(engine, expire_on_commit=False, class_=AsyncSession)
 Base = declarative_base()
 
 # Import all models here to ensure tables are registered
-from app.models import user, document, chunk  # Make sure these exist
+from app.models.user import User
+from app.models.document import Document
+from app.models.chunk import Chunk
+
 
 async def init_db():
     async with engine.begin() as conn:
