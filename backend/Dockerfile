@@ -1,0 +1,23 @@
+# Use slim Python image
+FROM python:3.11-slim
+
+# Set workdir
+WORKDIR /app
+
+# Copy requirements then install (leverages Docker cache)
+COPY requirements.txt .
+
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Copy application code
+COPY . .
+
+# Create upload directory
+RUN mkdir -p ./uploads
+
+ENV PYTHONUNBUFFERED=1
+
+# Expose port
+EXPOSE 8000
+
+CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000", "--reload"]
