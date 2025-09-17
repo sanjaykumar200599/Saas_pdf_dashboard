@@ -12,7 +12,7 @@ export default function SignupForm() {
     e.preventDefault();
     setMessage("");
     try {
-      await api.post("/signup", { username, password });
+      await api.post("api/auth/signup", { username, password });
       setMessage("Account created. You can now login.");
     } catch (err) {
       setMessage(err?.response?.data?.detail || "Signup failed");
