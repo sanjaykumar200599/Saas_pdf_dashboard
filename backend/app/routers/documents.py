@@ -7,7 +7,11 @@ from app.utils.database import SessionLocal
 from app.models.user import User
 from app.models.document import Document
 from app.schemas.document import DocumentOut
-from app.config import UPLOAD_DIR
+# new
+from app.config import settings
+
+UPLOAD_DIR = settings.UPLOAD_DIR
+
 from app.utils.jwt_handler import decode_token
 
 router = APIRouter()

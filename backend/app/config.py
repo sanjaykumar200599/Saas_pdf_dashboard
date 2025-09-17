@@ -1,8 +1,17 @@
-from dotenv import load_dotenv
+# app/config.py
+from pydantic_settings import BaseSettings
 import os
 
-load_dotenv()
+class Settings(BaseSettings):
+    DATABASE_URL: str
+    JWT_SECRET: str
+    UPLOAD_DIR: str = "uploads"
 
-DATABASE_URL = os.getenv("DATABASE_URL", "sqlite+aiosqlite:///./app.db")
-JWT_SECRET = os.getenv("JWT_SECRET", "supersecretjwt")
-UPLOAD_DIR = os.getenv("UPLOAD_DIR", "./uploads")
+    class Config:
+        env_file = ".env"
+
+# create instance
+settings = Settings()
+
+# ensure upload folder exists
+os.makedirs(settings.UPLOAD_DIR, exist_ok=True)

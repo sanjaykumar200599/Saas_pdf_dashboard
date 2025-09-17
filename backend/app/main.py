@@ -1,7 +1,9 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from app.routers import auth, documents, query
+from app.routers import auth, query
 from app.utils.database import init_db
+from app.routers import auth, query, documents
+
 
 app = FastAPI(title="Contract Analysis Backend")
 
