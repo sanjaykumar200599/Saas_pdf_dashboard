@@ -1,4 +1,4 @@
-﻿# Saas_pdf_dashboard
+﻿# Saas_pdf_dashboard (Internship assignment) 
 
 🎯 Complete Project Structure
 The project includes:
@@ -67,3 +67,4 @@ Professional contract table
 Sidebar navigation
 Loading states and error handling
 Mobile-friendly design
+
