@@ -31,7 +31,7 @@ Search functionality
 
 ✅ Database Schema
 
-Users, Documents, and Chunks tables
+Users, Documents,  Chunks tables
 pgvector integration for embeddings
 Proper relationships and indexes
 
@@ -67,4 +67,5 @@ Professional contract table
 Sidebar navigation
 Loading states and error handling
 Mobile-friendly design
+
 
