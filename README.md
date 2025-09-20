@@ -16,7 +16,7 @@ Dashboard: Business-friendly contract management
 User signup/login with JWT tokens
 All operations scoped to user_id
 
-✅ Document Upload & Processing
+✅ Document Upload & processing
 
 Drag & drop file upload (PDF/TXT/DOCX)
 Mock LlamaCloud parsing with embeddings
@@ -67,5 +67,6 @@ Professional contract table
 Sidebar navigation
 Loading states and error handling
 Mobile-friendly design
+
 
 
