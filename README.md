@@ -5,7 +5,7 @@ The project includes:
 
 Backend: FastAPI with PostgreSQL + pgvector
 Frontend: React + Tailwind CSS
-Authentication: JWT-based multi-user system
+Authentication: JWT-based multi-user systems
 File Processing: Mock LlamaCloud integration
 Vector Search: RAG workflow implementation
 Dashboard: Business-friendly contract management
@@ -67,6 +67,7 @@ Professional contract table
 Sidebar navigation
 Loading states and error handling
 Mobile-friendly design
+
 
 
 
